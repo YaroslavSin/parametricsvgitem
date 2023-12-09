@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 370 120" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com"
+	xmlns:parametric="https://parametric/v1.0">
+  <defs>
+    <parametric:default param="A_Label" value="Spring"/>
+    <parametric:default param="A" value="90" min="0" max="100"/>
+    <parametric:default param="B_Label" value="Summer"/>
+	<parametric:default param="B" value="60" min="0" max="100"/>
+	<parametric:default param="C_Label" value="Autumn"/>
+	<parametric:default param="C" value="25" min="0" max="100"/>
+	<parametric:default param="D_Label" value="Winter"/>
+	<parametric:default param="D" value="30" min="0" max="100"/>
+
+	<parametric:expression var="Value1" exp="A / 100 * 325"/>
+	<parametric:expression var="Value2" exp="B / 100 * 325"/>
+	<parametric:expression var="Value3" exp="C / 100 * 325"/>
+	<parametric:expression var="Value4" exp="D / 100 * 325"/>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 15)">
+    <path style="fill:none;stroke:#e6e6e6;stroke-linecap:round;stroke-linejoin:round;stroke-width:13.97px" d="M7 0 H 330"/>
+    <path style="fill: none; stroke: rgb(249, 164, 74); stroke-width: 15px;" d="M 0 0 H220" parametric:d="`M 0 0 H ${Value1}`"/>
+    <ellipse style="paint-order: fill; stroke: rgb(249, 164, 74); fill: rgb(255, 255, 255); stroke-width: 6px;" cx="220" cy="0" rx="10" ry="10" parametric:cx="`${Value1}`"/>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 11px; white-space: pre;" x="11.072" y="3.769" parametric:text="`${A_Label}`">Value 1</text>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-weight: 700; white-space: pre; font-size: 15px;" x="240" parametric:x="`${Value1 + 20}`" y="5.182" parametric:text="`${A}%`">80%</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 45)">
+    <path style="fill:none;stroke:#e6e6e6;stroke-linecap:round;stroke-linejoin:round;stroke-width:13.97px" d="M7 0 H 330"/>
+    <path style="fill: none; stroke-width: 15px; stroke: rgb(96, 217, 72);" d="M 0 0 H220" parametric:d="`M 0 0 H ${Value2}`"/>
+    <ellipse style="paint-order: fill; fill: rgb(255, 255, 255); stroke-width: 6px; stroke: rgb(96, 217, 72);" cx="220" cy="0" rx="10" ry="10" parametric:cx="`${Value2}`"/>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 11px; white-space: pre;" x="11.072" y="3.769" parametric:text="`${B_Label}`">Value 2</text>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-weight: 700; white-space: pre; font-size: 15px;" x="240" y="5.182" parametric:x="`${Value2 + 20}`" parametric:text="`${B}%`">80%</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 75)">
+    <path style="fill:none;stroke:#e6e6e6;stroke-linecap:round;stroke-linejoin:round;stroke-width:13.97px" d="M7 0 H 330"/>
+    <path style="fill: none; stroke-width: 15px; stroke: rgb(72, 165, 217);" d="M 0 0 H220" parametric:d="`M 0 0 H ${Value3}`"/>
+    <ellipse style="paint-order: fill; fill: rgb(255, 255, 255); stroke-width: 6px; stroke: rgb(72, 165, 217);" cx="220" cy="0" rx="10" ry="10" parametric:cx="`${Value3}`"/>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 11px; white-space: pre;" x="11.072" y="3.769" parametric:text="`${C_Label}`">Value 3</text>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-weight: 700; white-space: pre; font-size: 15px;" x="240" y="5.182" parametric:x="`${Value3 + 20}`" parametric:text="`${C}%`">80%</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 105)">
+    <path style="fill:none;stroke:#e6e6e6;stroke-linecap:round;stroke-linejoin:round;stroke-width:13.97px" d="M7 0 H 330"/>
+    <path style="fill: none; stroke-width: 15px; stroke: rgb(189, 72, 217);" d="M 0 0 H220" parametric:d="`M 0 0 H ${Value4}`"/>
+    <ellipse style="paint-order: fill; fill: rgb(255, 255, 255); stroke-width: 6px; stroke: rgb(189, 72, 217);" cx="220" cy="0" rx="10" ry="10" parametric:cx="`${Value4}`"/>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 11px; white-space: pre;" x="11.072" y="3.769" parametric:text="`${D_Label}`">Value 4</text>
+    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-weight: 700; white-space: pre; font-size: 15px;" x="240" y="5.182" parametric:x="`${Value4 + 20}`" parametric:text="`${D}%`">80%</text>
+  </g>
+</svg>
